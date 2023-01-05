@@ -1,16 +1,34 @@
 <template>
-  <div class="container">
-
-    <button @click="test">{{ txt }}</button>
-
+  <div id="root" class="app-wrapper">
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/css/v4-shims.css'
+import 'amis/sdk/sdk.js';
+import 'amis/lib/themes/default.css'
+import 'amis/lib/helper.css'
+import 'amis/sdk/iconfont.css'
+import 'amis-editor-core/lib/style.css'
+
+import './BI-src/mod.js'
+// import './BI-src/fis-conf.js'
+
+
+import { bootstrap } from './BI-src/index'
+
+import { applyPureReactInVue } from 'veaury'
+// This is a React Component
+import ReactButton from "./Button"
+
+
+
 @Options({
   components: {
+    ReactButton: applyPureReactInVue(ReactButton)
   }
 })
 
@@ -24,10 +42,29 @@ export default class TestBI extends Vue {
 
   mounted(): void {
     console.log("mounted");
+
+    // @ts-ignore
+    console.log("amisRequire", amisRequire);
+    // @ts-ignore
+    console.log("amis.require", amis.require);
+
+
+
+    bootstrap(document.getElementById('root') as HTMLElement);
+
   }
 
   test() {
     console.log("click");
   }
+
+  onClickForReact() {
+    console.log('clicked!')
+  }
 }
 </script>
+
+<style lang="less" scoped>
+  @import "./index.less";
+</style>
+

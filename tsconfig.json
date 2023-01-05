@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es6",
+    "module": "commonjs",
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
@@ -12,8 +12,13 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "emitDecoratorMetadata": true,
     "baseUrl": ".",
-    "types": [
+    "types": [ 
       "webpack-env",
       "jest"
     ],
@@ -23,6 +28,7 @@
       ]
     },
     "lib": [
+      "es6",
       "esnext",
       "dom",
       "dom.iterable",
@@ -30,11 +36,15 @@
     ]
   },
   "include": [
+    "**/*",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "src/views/TestBI/Button.tsx",
+    "src/views/TestBI/Button.tsx",
+    "src/views/TestBI/BI-src/mod.js"
   ],
   "exclude": [
     "node_modules"

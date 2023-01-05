@@ -1,4 +1,51 @@
+'use strict'
+const webpack = require('webpack');
 const { defineConfig } = require('@vue/cli-service')
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+
+function resolve(dir) { return require('path').join(__dirname, dir) }
+
 module.exports = defineConfig({
-  transpileDependencies: true
+  transpileDependencies: true,
+  filenameHashing: false,
+  chainWebpack: config => {
+
+    config.plugin('monaco').use(new MonacoWebpackPlugin())
+    config.merge({
+      resolve: {
+        conditionNames: ['require', 'node']
+      }
+    })
+
+    if (process.env.NODE_ENV === 'production') {
+      // config.output.filename('js/[name].js').end();
+      // config.output.chunkFilename('js/[name].js').end();
+      // // 修改生产配置
+      // config.plugin('extract-css').tap(args => [{
+      //   filename: `css/[name].css`,
+      //   chunkFilename: `css/[name].css`
+      // }])
+    } else {
+
+    }
+  },
+  configureWebpack: {
+    name: "MyBI",
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      },
+      fallback: {
+        crypto: false,
+        fs: false
+      }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        "React": "react"
+      })
+    ],
+    mode: "development",
+    devtool: "cheap-source-map"
+  },
 })
