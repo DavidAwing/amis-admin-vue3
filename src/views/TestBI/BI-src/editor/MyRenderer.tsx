@@ -18,7 +18,7 @@ import { RendererEditor, BasicEditor } from 'amis-editor';
   }
 })
 export default class MyRendererEditor extends BasicEditor {
-  tipName = '自定义组件';
+  tipName = '客制组件-1';
   settingsSchema = {
     title: '自定义组件配置',
     body: [
@@ -51,5 +51,6 @@ export default class MyRendererEditor extends BasicEditor {
   // 配置表单一些简单的基本上够用了。
   // 还有一些逻辑可以复写来自定义的，但是我现在没时间写说明了。
 }
+
 
 

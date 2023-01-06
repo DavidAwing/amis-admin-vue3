@@ -27,7 +27,7 @@ html {
   visibility: visible;
 }
 
-.a-Tabs--line > .a-Tabs-links > li > a:first-child {
+.a-Tabs--line>.a-Tabs-links>li>a:first-child {
   margin-right: 30px;
 }
 
@@ -110,7 +110,7 @@ html {
             margin-right: 12px;
           }
 
-          &:hover > svg {
+          &:hover>svg {
             color: @editor-active-color;
           }
 
@@ -148,25 +148,25 @@ html {
         justify-content: center;
         align-items: center;
 
-        > svg {
+        >svg {
           width: 16px;
           fill: @editor-default-color;
         }
 
-        &:hover > svg {
+        &:hover>svg {
           fill: @editor-active-color;
         }
 
         &.disabled {
           cursor: not-allowed;
 
-          > svg {
+          >svg {
             fill: @disabled-color;
           }
         }
 
         // 历史记录icon单独处理
-        > svg.icon-editor-history {
+        >svg.icon-editor-history {
           color: @editor-default-color;
 
           &:hover {
@@ -245,6 +245,7 @@ html {
       }
     }
   }
+
   .Editor-inner {
     position: relative;
     flex: 1 1 auto;
