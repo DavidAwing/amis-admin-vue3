@@ -1,6 +1,5 @@
 <template>
-  <div id="root" class="app-wrapper">
-  </div>
+  <div id="my-editor" class="app-wrapper"></div>
 </template>
 
 <script lang="ts">
@@ -20,7 +19,7 @@ import './BI-src/mod.js'
 import { bootstrap } from './BI-src/index'
 import { applyPureReactInVue } from 'veaury'
 // This is a React Component
-import ReactButton from "./Button"
+import ReactButton from "./test/Button"
 
 @Options({
   components: {
@@ -40,11 +39,12 @@ export default class TestBI extends Vue {
     console.log("mounted");
 
     // @ts-ignore
-    console.log("amisRequire", amisRequire);
+    // console.log("amisRequire", amisRequire);
     // @ts-ignore
-    console.log("amis.require", amis.require);
+    // console.log("amis.require", amis.require);
 
-    bootstrap(document.getElementById('root') as HTMLElement);
+    console.log("开始挂载编辑器");
+    bootstrap(document.getElementById('my-editor') as HTMLElement);
   }
 
   test() {
@@ -58,6 +58,6 @@ export default class TestBI extends Vue {
 </script>
 
 <style lang="less" scoped>
-  @import "./index.less";
+@import "./index.less";
 </style>
 

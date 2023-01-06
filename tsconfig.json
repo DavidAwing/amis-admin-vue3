@@ -42,8 +42,8 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/views/TestBI/Button.tsx",
-    "src/views/TestBI/Button.tsx",
+    "src/views/TestBI/test/Button.tsx",
+    "src/views/TestBI/test/Button.tsx",
     "src/views/TestBI/BI-src/mod.js"
   ],
   "exclude": [

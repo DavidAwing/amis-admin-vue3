@@ -4,11 +4,8 @@ import { Route, Switch, Redirect, HashRouter as Router } from 'react-router-dom'
 import { observer } from 'mobx-react';
 import { IMainStore } from '../../../../store';
 
-
-// Dynamic imports are only supported when the '--module' flag is set to 'es2020', 'es2022', 'esnext', 'commonjs', 'amd', 'system', 'umd', 'node12', or 'nodenext'.
 const Preview = React.lazy(() => import('./Preview'));
 const Editor = React.lazy(() => import('./Editor'));
-
 
 
 export default observer(function ({ store }: { store: IMainStore }): any {

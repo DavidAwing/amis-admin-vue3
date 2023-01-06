@@ -73,7 +73,6 @@ export default inject('store')(
 
     return (
 
-
       <div className="Editor-Demo">
 
         <div className="Editor-header">
@@ -141,7 +140,7 @@ export default inject('store')(
             onSave={save}
             className="is-fixed"
             $schemaUrl={schemaUrl}
-            iframeUrl={iframeUrl}
+            // iframeUrl={iframeUrl}
             showCustomRenderersPanel={true}
             amisEnv={{
               fetcher: store.fetcher,
