@@ -17,14 +17,10 @@ import 'amis-editor-core/lib/style.css'
 import './BI-src/mod.js'
 // import './BI-src/fis-conf.js'
 
-
 import { bootstrap } from './BI-src/index'
-
 import { applyPureReactInVue } from 'veaury'
 // This is a React Component
 import ReactButton from "./Button"
-
-
 
 @Options({
   components: {
@@ -48,10 +44,7 @@ export default class TestBI extends Vue {
     // @ts-ignore
     console.log("amis.require", amis.require);
 
-
-
     bootstrap(document.getElementById('root') as HTMLElement);
-
   }
 
   test() {

@@ -1,10 +1,14 @@
 import React from 'react';
-import { RouteComponentProps, withRouter } from 'react-router';
+import { RouteComponentProps } from 'react-router';
 import { inject, observer } from 'mobx-react';
 import { getEnv } from 'mobx-state-tree';
 import { IMainStore } from '../../../../store';
 import qs from 'qs';
 import { render, utils, filter } from 'amis';
+// import { Router } from 'react-router';
+import { withRouter } from 'react-router-dom';
+
+
 
 export function schema2component(
   schema: any,
@@ -12,28 +16,19 @@ export function schema2component(
   session = 'page'
 ) {
 
-  console.log("报错1");
-
-
   interface SchemaRendererProps extends RouteComponentProps<{}> {
     store: IMainStore;
     [propName: string]: any;
   }
 
-  console.log("报错2");
-
   @inject('store')
   @observer
   class SchemaRenderer extends React.Component<SchemaRendererProps> {
-
-
 
     static displayName = 'SchemaRenderer';
     env: any;
 
     getEnv() {
-
-      console.log("报错22");
 
       if (this.env) {
         return this.env;
@@ -180,8 +175,6 @@ export function schema2component(
 
     render() {
 
-      console.log("报错31");
-
       const {
         router,
         match,
@@ -219,14 +212,10 @@ export function schema2component(
         this.getEnv()
       );
 
-      console.log("报错3");
-
       return <>{body}</>;
     }
 
   }
-
-  console.log("报错4");
 
   return withRouter(SchemaRenderer);
 }

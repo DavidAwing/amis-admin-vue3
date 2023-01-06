@@ -9,8 +9,6 @@ import copy from 'copy-to-clipboard';
 
 export default function (props: any) {
 
-    // const store = {} as any
-
     const store = ((window as any).store = MainStore.create(
         {},
         {

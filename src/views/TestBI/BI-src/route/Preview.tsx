@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react';
 import { IMainStore } from '../../../../store';
 import { Button, AsideNav, Layout, confirm } from 'amis';
 import { RouteComponentProps, matchPath } from 'react-router';
-import { Link, BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Link, Router, BrowserRouter, Switch, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import AMISRenderer from '../component/AMISRenderer';
 import AddPageModal from '../component/AddPageModal';
@@ -201,37 +201,28 @@ export default inject('store')(
       >
 
         {/*  @ts-ignore   */}
-        <BrowserRouter>
-          {/*  @ts-ignore   */}
-          <Switch>
-            {store.pages.map(item => (
+        <Switch>
+          {store.pages.map(item => (
+            //  @ts-ignore
+            <Route
+              key={item.id}
+              path={`/${item.path}`}
               //  @ts-ignore
-              <Route
-                key={item.id}
-                path={`/${item.path}`}
-                //  @ts-ignore
-                render={() => <AMISRenderer schema={item.schema} />}
-              />
-            ))}
-
-            {/*  @ts-ignore   */}
-            <Route component={NotFound} />
-            {/*  @ts-ignore   */}
-          </Switch>
-        </BrowserRouter>
-
-
+              render={() => <AMISRenderer schema={item.schema} />}
+            />
+          ))}
+          {/*  @ts-ignore   */}
+          <Route component={NotFound} />
+          {/*  @ts-ignore   */}
+        </Switch>
 
         {/*  @ts-ignore   */}
-        {/* <AddPageModal
+        <AddPageModal
           show={store.addPageIsOpen}
           onClose={() => store.setAddPageIsOpen(false)}
           onConfirm={handleConfirm}
           pages={store.pages.concat()}
-        /> */}
-
-
-
+        />
 
       </Layout>
     );

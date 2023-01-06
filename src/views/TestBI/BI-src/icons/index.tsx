@@ -7,15 +7,10 @@
 import React, { useRef } from 'react'
 import { Icon, registerIcon } from 'amis';
 
-// @ts-ignore
-import PCPreview from '../../../../assets/img/pc-preview.svg';
-// @ts-ignore
-import H5Preview from '../../../../assets/img/h5-preview.svg';
+import PCPreview from './pc-preview'; // '../../../../assets/img/pc-preview.svg'
+import H5Preview from './h5-preview';
 
-
-// @ts-ignore
-registerIcon('pc-preview', PCPreview);
-// @ts-ignore
-registerIcon('h5-preview', H5Preview);
+registerIcon('pc-preview', PCPreview as any);
+registerIcon('h5-preview', H5Preview as any);
 
 export { Icon, PCPreview, H5Preview };

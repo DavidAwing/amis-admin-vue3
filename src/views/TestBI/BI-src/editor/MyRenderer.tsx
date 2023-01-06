@@ -1,5 +1,5 @@
 import React from 'react';
-import {RendererEditor, BasicEditor} from 'amis-editor';
+import { RendererEditor, BasicEditor } from 'amis-editor';
 
 @RendererEditor('my-renderer', {
   name: '自定义渲染器',

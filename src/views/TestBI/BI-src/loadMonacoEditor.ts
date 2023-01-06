@@ -8,7 +8,7 @@ export function __mod__async__load(callback: (exports: any) => void) {
   script.onload = () => onLoad(window.require, callback);
 }
 
-function __uri(url: string) {
+export function __uri(url: string) {
   return url;
 }
 
