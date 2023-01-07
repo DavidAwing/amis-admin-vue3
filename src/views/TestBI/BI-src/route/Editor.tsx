@@ -9,7 +9,7 @@ import { IMainStore } from '../../../../store';
 import '../editor/DisabledEditorPlugin'; // 用于隐藏一些不需要的Editor预置组件
 import '../renderer/MyRenderer';
 import '../editor/MyRenderer';
-import { __uri } from '../loadMonacoEditor';
+// import { __uri } from '../loadMonacoEditor';
 
 let currentIndex = -1;
 
@@ -36,7 +36,7 @@ const editorLanguages = [
   }
 ];
 
-__uri('amis/schema.json');
+// __uri('amis/schema.json');
 
 export default inject('store')(
   observer(function ({

@@ -13,7 +13,7 @@ import 'amis/lib/helper.css'
 import 'amis/sdk/iconfont.css'
 import 'amis-editor-core/lib/style.css'
 
-import './BI-src/mod.js'
+// import './BI-src/mod.js'
 // import './BI-src/fis-conf.js'
 
 import { bootstrap } from './BI-src/index'
