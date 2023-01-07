@@ -1,5 +1,5 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="less">
@@ -10,5 +10,4 @@
   // text-align: center;
   color: #2c3e50;
 }
-
 </style>

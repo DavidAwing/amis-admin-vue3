@@ -43,6 +43,8 @@ export default class TestBI extends Vue {
     // @ts-ignore
     // console.log("amis.require", amis.require);
 
+    document.title = "BI 系统"
+
     console.log("开始挂载编辑器");
     bootstrap(document.getElementById('my-editor') as HTMLElement);
 

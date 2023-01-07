@@ -6,6 +6,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'TestBI',
     component: () => import('../views/TestBI/index.vue')
+  },
+  {
+    path: '/mobile-editor',
+    name: 'mobile-editor',
+    component: () => import('../views/TestBI/BI-src/mobile-editor/index.vue')
   }
 ]
 
