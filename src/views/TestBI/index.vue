@@ -19,10 +19,11 @@ import 'amis-editor-core/lib/style.css'
 import { bootstrap } from './BI-src/index'
 import { applyPureReactInVue } from 'veaury'
 // This is a React Component
-import ReactButton from "./test/Button"
+import TestComponent, { ReactButton } from "./test/Button"
 
 @Options({
   components: {
+    TestComponent: applyPureReactInVue(TestComponent),
     ReactButton: applyPureReactInVue(ReactButton)
   }
 })

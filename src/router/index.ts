@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { applyPureReactInVue } from 'veaury'
+import MobileEditor from '../views/TestBI/BI-src/mobile-editor/index'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,7 +11,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/mobile-editor',
     name: 'mobile-editor',
-    component: () => import('../views/TestBI/BI-src/mobile-editor/index.vue')
+    component: applyPureReactInVue(MobileEditor)
   }
 ]
 

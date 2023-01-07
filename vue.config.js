@@ -7,7 +7,7 @@ function resolve(dir) { return require('path').join(__dirname, dir) }
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  filenameHashing: false,
+  filenameHashing: true,
   chainWebpack: config => {
 
     config.plugin('monaco').use(new MonacoWebpackPlugin())

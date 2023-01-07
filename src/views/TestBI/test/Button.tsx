@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, Component } from 'react'
 
-export default function (props: any) {
+const ReactButton = function (props: any) {
+
     const style = useRef({
         background: '#91e7fc',
         width: 500,
@@ -18,3 +19,16 @@ export default function (props: any) {
         {props.children}
     </div>)
 }
+
+export default class TestComponent extends React.Component {
+    componentDidMount() {
+        console.log("测试");
+    }
+    render() {
+        return (
+            <div>测试组件生命周期</div>
+        );
+    }
+}
+
+export { ReactButton }
