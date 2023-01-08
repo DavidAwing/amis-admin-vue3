@@ -2,12 +2,14 @@
 const webpack = require('webpack');
 const { defineConfig } = require('@vue/cli-service')
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 
 function resolve(dir) { return require('path').join(__dirname, dir) }
 
 module.exports = defineConfig({
   transpileDependencies: true,
   filenameHashing: true,
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   chainWebpack: config => {
 
     config.plugin('monaco').use(new MonacoWebpackPlugin())
@@ -62,7 +64,8 @@ module.exports = defineConfig({
     plugins: [
       new webpack.ProvidePlugin({
         "React": "react"
-      })
+      }),
+      new NodePolyfillPlugin()
     ],
     mode: "development",
     devtool: "cheap-source-map"

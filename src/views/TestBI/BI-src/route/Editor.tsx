@@ -15,7 +15,7 @@ let currentIndex = -1;
 
 let host = `${window.location.protocol}//${window.location.host}`;
 // let iframeUrl = '/editor.html';
-let iframeUrl = '/mobile-editor';
+let iframeUrl = process.env.NODE_ENV === 'production' ? '/bi/mobile-editor' : '/mobile-editor';
 
 // 如果在 gh-pages 里面
 if (/^\/amis-editor-demo/.test(window.location.pathname)) {

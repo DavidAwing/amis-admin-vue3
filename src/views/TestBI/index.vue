@@ -1,5 +1,5 @@
 <template>
-  <div id="my-editor" class="app-wrapper"></div>
+  <div id="my-editor" class-name="app-wrapper"></div>
 </template>
 
 <script lang="ts">

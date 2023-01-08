@@ -39,6 +39,7 @@
     "mobx-react": "^6.3.1",
     "mobx-state-tree": "^3.17.3",
     "monaco-editor-webpack-plugin": "^6.0.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "qs": "^6.5.3",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.1.0",
