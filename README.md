@@ -1,16 +1,20 @@
-# wingbi
+# amis-admin-vue3
 
-## Project setup
+基于 [amis](https://github.com/baidu/amis) 渲染器，快速搭建自己的管理系统。
+
+此低代码编辑器项目的[原始版本](https://github.com/aisuda/amis-admin)是基于react的,已修改为基于vue3
+
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译
 ```
 npm run build
 ```
