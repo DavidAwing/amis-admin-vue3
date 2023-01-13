@@ -17,15 +17,12 @@ export default class MobileEditor extends React.Component {
 
   constructor(props:any) {
     super(props);
-    console.log("创建...");
+    console.log("MobileEditor constructor");
   }
 
   // 等同于vue的mounted方法
   componentDidMount() {
-    console.log("手机端开始挂载编辑器");
-
     mountInIframe(document.getElementById('mobile-editor') as HTMLElement, ReactDom);
-    console.log("手机端完成挂载");
   }
   render() {
     return (

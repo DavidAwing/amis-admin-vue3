@@ -22,7 +22,7 @@ const ReactButton = function (props: any) {
 
 export default class TestComponent extends React.Component {
     componentDidMount() {
-        console.log("测试");
+        console.log("react dom 已挂载");
     }
     render() {
         return (

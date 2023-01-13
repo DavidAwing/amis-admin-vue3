@@ -32,32 +32,17 @@ export default class TestBI extends Vue {
 
   txt = "测试按钮";
 
-  created() {
-    console.log("created");
-  }
-
   mounted(): void {
-    console.log("mounted");
 
     // @ts-ignore
     // console.log("amisRequire", amisRequire);
     // @ts-ignore
     // console.log("amis.require", amis.require);
 
-    document.title = "BI 系统"
-
-    console.log("开始挂载编辑器");
+    document.title = "amis-admin-vue3"
     bootstrap(document.getElementById('my-editor') as HTMLElement);
-
   }
 
-  test() {
-    console.log("click");
-  }
-
-  onClickForReact() {
-    console.log('clicked!')
-  }
 }
 </script>
 
